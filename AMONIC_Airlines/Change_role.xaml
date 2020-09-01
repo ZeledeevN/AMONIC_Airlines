@@ -1,0 +1,44 @@
+﻿<Window x:Class="AMONIC_Airlines.Change_role"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMONIC_Airlines"
+        mc:Ignorable="d"
+        Title="Change Role" Height="450" Width="601.133">
+    <Grid>
+        <Label Margin="114,43,0,0" Content="Email address" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"/>
+        <TextBox Name="Email" Margin="309,43,0,0" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"></TextBox>
+        <Label Margin="114,214,0,0" Content="office" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"/>
+        <Label Margin="114,153,0,0" Content="Last Name" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"/>
+        <TextBox Name="Lname" Margin="309,153,0,0" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"></TextBox>
+        <Label Margin="114,92,0,0" RenderTransformOrigin="0.512,3.191" Content="First Nmae" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"/>
+        <TextBox Name="Fname" Margin="309,92,0,0" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"></TextBox>
+        <ComboBox Name="offices" HorizontalAlignment="Left" Margin="309,222,0,0" VerticalAlignment="Top" Width="168"    >
+            <ComboBoxItem IsSelected="True">
+                <TextBlock Name="all">Office name</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="1">
+                <TextBlock Name="abu_dhabi">Abu dhabi</TextBlock>
+            </ComboBoxItem>
+
+            <ComboBoxItem Tag="3">
+                <TextBlock>Cairo</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="4">
+                <TextBlock>Bahrain</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="5">
+                <TextBlock>Doha</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem Tag="6">
+                <TextBlock>Riyadh</TextBlock>
+            </ComboBoxItem>
+        </ComboBox>
+        <Label Margin="114,273,0,0" Content="Role" HorizontalAlignment="Left" Width="168" Height="30" VerticalAlignment="Top"/>
+        <RadioButton Name="CheckUser" IsChecked="True" Content="User" Margin="309,279,0,0" HorizontalAlignment="Left" Width="85" Height="15" VerticalAlignment="Top" GroupName="First Group" Checked="HandleCheck" />
+        <RadioButton Name="CheckAdmin" Content="Administrator" HorizontalAlignment="Left" Margin="309,310,0,0" VerticalAlignment="Top" GroupName="First Group" Checked="HandleCheck"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="157,380,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="325,380,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+    </Grid>
+</Window>
